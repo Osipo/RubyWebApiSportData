@@ -1,0 +1,14 @@
+.center {
+    position:absolute;
+    width:75%;
+    height:20%;
+    left:20%;
+    top:25%;
+}
+.cont {
+    position:absolute;
+    width:90%;
+    left:5%;
+    top:50%;
+    height:50%;
+}

@@ -1,0 +1,34 @@
+<%= stylesheet_link_tag    'articles'%>
+<div class="center">
+<%= form_tag "/articles", method: :get %>
+  <%= text_field_tag :query %>
+  <div class="bottom_filters">
+  	<div name="article[filter]">
+  		<label>Title</label>
+  		<input type="radio" id="article_filter_type_title" name="article_filters"  value="title" />
+  	</div>
+  	<div name="article[filter]">
+  		<label>Url</label>
+  		<input type="radio" id="article_filter_type_url" name="article_filters" value="url"/>
+  	</div>
+  	<div name="article[filter]">
+  		<label>Content</label>
+  		<input type="radio" id="article_filter_type_content" name="article_filters" value="content"/>
+  	</div>
+  </div>
+  <%= submit_tag "Search" %>
+</div>
+<div class="cont">
+<% if @response %>
+  <% @response.each do |element| %>
+    <h1>
+      <%= element["attributes"]["title"]%>
+    </h1>
+    <p>
+      <%= element["attributes"]["content"] %>
+    </p>
+  <% end %>
+  <% else %>
+    <h1>NOT FOUND</h1>
+<% end %>
+</div>

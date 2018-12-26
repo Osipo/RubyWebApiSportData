@@ -1,0 +1,49 @@
+.center {
+    position:absolute;
+    width:75%;
+    height:20%;
+    left:20%;
+    top:25%;
+}
+.bottom_filters{
+    position: absolute;
+    width:100%;
+    height:40%;
+    top:65%;
+}
+.cont {
+    position:absolute;
+    width:90%;
+    left:5%;
+    top:50%;
+    height:50%;
+}
+input[name="query"]{
+    position:absolute;
+    width:70%;
+    left:0;
+    font:bold 18pt Times new Roman;
+    height:40%;
+}
+div[name="article[filter]"]{
+    position: relative;
+    margin-left:5%;
+    width:15%;
+    height:100%;
+    display:inline;
+}
+input[value="Search"]{
+    position:absolute;
+    width:10%;
+    left:72%;
+    height:50%;
+    color:white;
+    transition: all 0.2s ease;
+    background-color:red;
+    cursor:pointer;
+    border-radius:10%;
+    font: bold 13pt Sans-serif;
+}
+input[value="Search"]:hover{
+	background-color: green;
+}
